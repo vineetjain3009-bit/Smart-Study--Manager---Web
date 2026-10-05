@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Subjects</title>
+</head>
+<body>
+
+    <h1>Subjects</h1>
+
+    <a href="/subjects/add">Add Subject</a>
+
+    <hr>
+
+    {% for subject in subjects %}
+        <div>
+            <h3>{{ subject.name }}</h3>
+
+            <p>Code: {{ subject.code }}</p>
+            <p>Teacher: {{ subject.teacher_name }}</p>
+
+            <a href="/subjects/edit/{{ subject.id }}">Edit</a>
+            <a href="/subjects/delete/{{ subject.id }}">Delete</a>
+        </div>
+
+        <hr>
+    {% endfor %}
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attendance</title>
+</head>
+<body>
+
+<h1>Attendance</h1>
+
+{% for subject in subjects %}
+    <h2>{{ subject.name }}</h2>
+    <p>Total Classes: {{ subject.total_classes }}</p>
+    <p>Attended Classes: {{ subject.attended_classes }}</p>
+    <p>Attendance: {{ subject.attendance_percentage }}%</p>
+{% endfor %}
+
+</body>
+</html>
